@@ -1,0 +1,5 @@
+@mixin atMedium {
+    @media(max-width: 760px) {
+        @content
+    }
+}

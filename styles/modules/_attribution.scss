@@ -1,0 +1,15 @@
+.attribution {
+
+    color: $DarkGrayishBlue;
+    grid-row-start: 4;
+    grid-column-end: span 4;
+
+    a:hover {
+        color: orange;
+    }
+
+    @include atMedium {
+        grid-row-start: 5;
+        grid-column-end: span 2;
+    }
+}

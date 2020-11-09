@@ -1,0 +1,14 @@
+.photo {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    overflow: hidden;
+
+    img {
+        border-radius: 0.5em 1em 1em 0.5em;
+
+        @include atMedium {
+            width: 100%;
+            border-radius: 0.5em 0.5em 0 0;
+        }
+    }
+}

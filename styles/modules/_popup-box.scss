@@ -1,0 +1,62 @@
+.popup-box {
+    visibility: hidden;
+    color: #ffff;
+    background-color: $DarkGrayishBlue;
+    width: 200px;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    padding: 15px;
+    top: -65px;
+    right: -85px;
+    box-shadow: 2px 2px 3px 1px $GrayishBlue;
+
+    @include atMedium {
+        width: 305px;
+        top: -12px;
+        right: -20px;
+        border-radius: 0 0 5px 5px;
+
+        ::after {
+            visibility: hidden;
+        }
+    }
+
+    .caps {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 0.8rem;
+        margin-right: 5px;
+    }
+
+    img {
+        width: 1.2em;
+        margin-left: 10px;
+    }
+
+    ::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -7px;
+        border-width: 7px;
+        border-style: solid;
+        border-color:   $DarkGrayishBlue transparent transparent transparent;
+        }
+    
+    &.show {
+        visibility: visible;
+        animation: fadeIn 0.5s;
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}            
+        }
+    }
+
+    
+}
